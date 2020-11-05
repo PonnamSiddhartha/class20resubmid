@@ -17,14 +17,15 @@ function draw() {
   wall.shapeColor="80,80,80";
   if (hasCollided(bullet,wall)){
     bullet.velocityX=0;
-    var damage=0.5*weight*speed/(thickness*thickness*thickness);
-  }
+    var damage=0.5 *weight*speed*speed/(thickness*thickness*thickness)
+
   if(damage>10){
     wall.shapeColor=color(255,0,0);
   }
   if(damage<10){
     wall.shapeColor=color(0,255,0);
   }
+}
   if(wall.x-bullet.x<(bullet.width+wall.width)/2)
   {
     bullet.velocityX=0;
@@ -42,12 +43,12 @@ function draw() {
       bullet.shapeColor=color(0,255,0)
     }
   }
-}
   drawSprites();
+}
   function hasCollided()
   {
-    bulletRightEdge=lbullet.x+lbullet.width;
-    wallleftEdge=lwall.x;
+    bulletRightEdge=bullet.x+bullet.width;
+    wallleftEdge=wall.x;
     if(bulletRightEdge>=wallleftEdge){
       return true
 
