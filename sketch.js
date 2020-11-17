@@ -29,7 +29,7 @@ function draw() {
   if(wall.x-bullet.x<(bullet.width+wall.width)/2)
   {
     bullet.velocityX=0;
-    var deformation=0.5*wieght*speed*speed/22509
+    var deformation=0.5*weight*speed*speed/22509
     if(deformation>180)
     {
       bullet.shapeColor=color(225,0,0)
